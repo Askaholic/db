@@ -222,16 +222,16 @@
         "comments": ""
     },
     {
-        "tableName": "updates_fafdevelop_files",
+        "tableName": "updates_equilibrium",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "obselete",
-        "type": "BIT",
-        "length": 1,
+        "name": "path",
+        "type": "VARCHAR",
+        "length": 45,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -911,17 +911,17 @@
         "comments": ""
     },
     {
-        "tableName": "game_featuredMods",
+        "tableName": "ladder_map",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "deployment_webhook",
-        "type": "MEDIUMTEXT",
-        "length": 16777215,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>idmap",
+        "type": "MEDIUMINT UNSIGNED",
+        "length": 8,
+        "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>A webhook to be called after successfull deployment<\/p>"
+        "comments": ""
     },
     {
         "tableName": "user_notes",
@@ -963,17 +963,17 @@
         "comments": ""
     },
     {
-        "tableName": "teamkills",
+        "tableName": "updates_blackops_files",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>victim",
-        "type": "MEDIUMINT UNSIGNED",
-        "length": 8,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "version",
+        "type": "INT",
+        "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>login of the player who got teamkilled and reported the tk<\/p>"
+        "comments": ""
     },
     {
         "tableName": "league_rating_range",
@@ -991,13 +991,13 @@
     {
         "tableName": "game_featuredMods",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "TINYINT UNSIGNED",
-        "length": 3,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "description",
+        "type": "MEDIUMTEXT",
+        "length": 16777215,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
         "comments": ""
     },
@@ -1457,17 +1457,17 @@
         "comments": ""
     },
     {
-        "tableName": "league",
+        "tableName": "map_version_reviews_summary",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "update_time",
-        "type": "TIMESTAMP",
-        "length": 26,
+        "name": "lower_bound",
+        "type": "FLOAT",
+        "length": 12,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "CURRENT_TIMESTAMP",
-        "comments": ""
+        "defaultValue": "null",
+        "comments": "<p>Lower bound of Wilson score confidence interval for a Bernoulli parameter<\/p>"
     },
     {
         "tableName": "group_permission",
@@ -1773,13 +1773,13 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "git_url",
+        "name": "file_extension",
         "type": "VARCHAR",
-        "length": 255,
+        "length": 3,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>The git repository URL to load this mod from<\/p>"
+        "comments": ""
     },
     {
         "tableName": "updates_koth_files",
@@ -1901,12 +1901,12 @@
     {
         "tableName": "game_featuredMods",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>gamemod",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "name",
         "type": "VARCHAR",
-        "length": 50,
-        "nullable": "√",
+        "length": 255,
+        "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
         "comments": ""
@@ -2042,7 +2042,7 @@
         "comments": ""
     },
     {
-        "tableName": "map_version_reviews_summary",
+        "tableName": "league",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
@@ -2319,13 +2319,13 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "publish",
-        "type": "BIT",
-        "length": 1,
-        "nullable": "",
+        "name": "git_url",
+        "type": "VARCHAR",
+        "length": 255,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
-        "comments": ""
+        "defaultValue": "null",
+        "comments": "<p>The git repository URL to load this mod from<\/p>"
     },
     {
         "tableName": "updates_tutorials",
@@ -2341,17 +2341,17 @@
         "comments": ""
     },
     {
-        "tableName": "teamkills",
+        "tableName": "updates_blackops_files",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>game_id",
-        "type": "INT UNSIGNED",
-        "length": 10,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "name",
+        "type": "VARCHAR",
+        "length": 45,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>game-id where teamkill was performed<\/p>"
+        "comments": ""
     },
     {
         "tableName": "uniqueid",
@@ -2913,15 +2913,15 @@
         "comments": ""
     },
     {
-        "tableName": "updates_fafdevelop_files",
+        "tableName": "updates_equilibrium",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "name",
-        "type": "VARCHAR",
-        "length": 45,
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>id",
+        "type": "SMALLINT UNSIGNED",
+        "length": 5,
         "nullable": "",
-        "autoUpdated": "",
+        "autoUpdated": "√",
         "defaultValue": "null",
         "comments": ""
     },
@@ -3290,13 +3290,13 @@
         "comments": ""
     },
     {
-        "tableName": "updates_equilibrium",
+        "tableName": "updates_fafdevelop_files",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "filename",
-        "type": "VARCHAR",
-        "length": 45,
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>fileId",
+        "type": "SMALLINT UNSIGNED",
+        "length": 5,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
@@ -3381,17 +3381,17 @@
         "comments": ""
     },
     {
-        "tableName": "map_version_reviews_summary",
+        "tableName": "league",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "positive",
-        "type": "FLOAT",
-        "length": 12,
+        "name": "description",
+        "type": "MEDIUMTEXT",
+        "length": 16777215,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>The &lsquo;positive&rsquo; share of the rating<\/p>"
+        "comments": ""
     },
     {
         "tableName": "achievement_statistics",
@@ -3446,17 +3446,17 @@
         "comments": ""
     },
     {
-        "tableName": "map_version_reviews_summary",
+        "tableName": "league",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "reviews",
-        "type": "INT",
-        "length": 10,
+        "name": "update_time",
+        "type": "TIMESTAMP",
+        "length": 26,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "null",
-        "comments": "<p>The sum of all &lsquo;negative&rsquo; and &lsquo;positive&rsquo; shares. Equals to the number of reviews.<\/p>"
+        "defaultValue": "CURRENT_TIMESTAMP",
+        "comments": ""
     },
     {
         "tableName": "vote",
@@ -3524,17 +3524,17 @@
         "comments": "<p>A string represents if the client is confidential or public.<\/p>"
     },
     {
-        "tableName": "league",
+        "tableName": "map_version_reviews_summary",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>director_id",
-        "type": "MEDIUMINT UNSIGNED",
-        "length": 8,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "score",
+        "type": "FLOAT",
+        "length": 12,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Login ID of the user who created this league<\/p>"
+        "comments": "<p>The sum of all scores<\/p>"
     },
     {
         "tableName": "global_rating_rank_view",
@@ -3571,9 +3571,9 @@
         "type": "SMALLINT UNSIGNED",
         "length": 5,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>This table is managed by Flyway. Do not manually edit records.<\/p>"
     },
     {
         "tableName": "clan",
@@ -3628,30 +3628,30 @@
         "comments": ""
     },
     {
-        "tableName": "map_version_reviews_summary",
+        "tableName": "league",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>map_version_id",
-        "type": "MEDIUMINT UNSIGNED",
-        "length": 8,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "name",
+        "type": "TEXT",
+        "length": 65535,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
         "comments": ""
     },
     {
-        "tableName": "updates_blackops_files",
+        "tableName": "teamkills",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "version",
-        "type": "INT",
-        "length": 10,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>victim",
+        "type": "MEDIUMINT UNSIGNED",
+        "length": 8,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>login of the player who got teamkilled and reported the tk<\/p>"
     },
     {
         "tableName": "schema_version",
@@ -3671,13 +3671,13 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "git_branch",
-        "type": "VARCHAR",
-        "length": 255,
+        "name": "allow_override",
+        "type": "BIT",
+        "length": 1,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>The repository branch that contains the latest version<\/p>"
+        "comments": "<p>Whether overriding an existing version is allowed (1) or not (0).<\/p>"
     },
     {
         "tableName": "oauth_tokens",
@@ -3797,30 +3797,30 @@
         "comments": "<p>The current steps for an incremental achievement.<\/p>"
     },
     {
-        "tableName": "map_version_reviews_summary",
+        "tableName": "league",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "negative",
-        "type": "FLOAT",
-        "length": 12,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>director_id",
+        "type": "MEDIUMINT UNSIGNED",
+        "length": 8,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>The &lsquo;negative&rsquo; share of the rating<\/p>"
+        "comments": "<p>Login ID of the user who created this league<\/p>"
     },
     {
-        "tableName": "game_featuredMods",
+        "tableName": "ladder_map",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "allow_override",
-        "type": "BIT",
-        "length": 1,
-        "nullable": "√",
-        "autoUpdated": "",
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
+        "type": "SMALLINT UNSIGNED",
+        "length": 5,
+        "nullable": "",
+        "autoUpdated": "√",
         "defaultValue": "null",
-        "comments": "<p>Whether overriding an existing version is allowed (1) or not (0).<\/p>"
+        "comments": ""
     },
     {
         "tableName": "updates_balancetesting",
@@ -4005,17 +4005,17 @@
         "comments": ""
     },
     {
-        "tableName": "updates_blackops_files",
+        "tableName": "teamkills",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>fileId",
-        "type": "SMALLINT UNSIGNED",
-        "length": 5,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>teamkiller",
+        "type": "MEDIUMINT UNSIGNED",
+        "length": 8,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>login of the player who performed the teamkill<\/p>"
     },
     {
         "tableName": "vm_exempt",
@@ -4139,13 +4139,13 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "order",
-        "type": "SMALLINT UNSIGNED",
-        "length": 5,
-        "nullable": "",
+        "name": "git_branch",
+        "type": "VARCHAR",
+        "length": 255,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
-        "comments": "<p>Order in the featured mods list<\/p>"
+        "defaultValue": "null",
+        "comments": "<p>The repository branch that contains the latest version<\/p>"
     },
     {
         "tableName": "tutorial_sections",
@@ -4304,12 +4304,12 @@
         "comments": ""
     },
     {
-        "tableName": "updates_blackops_files",
+        "tableName": "teamkills",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
         "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT UNSIGNED",
+        "type": "INT",
         "length": 10,
         "nullable": "",
         "autoUpdated": "√",
@@ -4425,12 +4425,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "description",
-        "type": "MEDIUMTEXT",
-        "length": 16777215,
+        "name": "publish",
+        "type": "BIT",
+        "length": 1,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -5032,17 +5032,17 @@
         "comments": ""
     },
     {
-        "tableName": "league",
+        "tableName": "map_version_reviews_summary",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "name",
-        "type": "TEXT",
-        "length": 65535,
+        "name": "positive",
+        "type": "FLOAT",
+        "length": 12,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The &lsquo;positive&rsquo; share of the rating<\/p>"
     },
     {
         "tableName": "achievement_definitions",
@@ -5162,17 +5162,17 @@
         "comments": ""
     },
     {
-        "tableName": "league",
+        "tableName": "map_version_reviews_summary",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "create_time",
-        "type": "TIMESTAMP",
-        "length": 26,
+        "name": "reviews",
+        "type": "INT",
+        "length": 10,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "CURRENT_TIMESTAMP",
-        "comments": ""
+        "defaultValue": "null",
+        "comments": "<p>The sum of all &lsquo;negative&rsquo; and &lsquo;positive&rsquo; shares. Equals to the number of reviews.<\/p>"
     },
     {
         "tableName": "user_agent_stats",
@@ -5188,16 +5188,16 @@
         "comments": ""
     },
     {
-        "tableName": "updates_blackops_files",
+        "tableName": "teamkills",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "obselete",
-        "type": "BIT",
-        "length": 1,
+        "name": "reported_at",
+        "type": "DATETIME",
+        "length": 26,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "CURRENT_TIMESTAMP",
         "comments": ""
     },
     {
@@ -5708,25 +5708,25 @@
         "comments": "<p>If null the avatar is permanent<\/p>"
     },
     {
-        "tableName": "ladder_map",
+        "tableName": "game_featuredMods",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
         "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "SMALLINT UNSIGNED",
-        "length": 5,
+        "type": "TINYINT UNSIGNED",
+        "length": 3,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>This table is managed by Flyway. Do not manually edit records.<\/p>"
     },
     {
-        "tableName": "teamkills",
+        "tableName": "updates_blackops_files",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
         "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT",
+        "type": "INT UNSIGNED",
         "length": 10,
         "nullable": "",
         "autoUpdated": "√",
@@ -5762,15 +5762,15 @@
     {
         "tableName": "map_version_reviews_summary",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "lower_bound",
-        "type": "FLOAT",
-        "length": 12,
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
+        "type": "INT UNSIGNED",
+        "length": 10,
         "nullable": "",
-        "autoUpdated": "",
+        "autoUpdated": "√",
         "defaultValue": "null",
-        "comments": "<p>Lower bound of Wilson score confidence interval for a Bernoulli parameter<\/p>"
+        "comments": ""
     },
     {
         "tableName": "updates_civilians",
@@ -5942,11 +5942,11 @@
         "comments": ""
     },
     {
-        "tableName": "updates_fafdevelop_files",
+        "tableName": "updates_equilibrium",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "md5",
+        "name": "filename",
         "type": "VARCHAR",
         "length": 45,
         "nullable": "",
@@ -6087,13 +6087,13 @@
     {
         "tableName": "updates_fafdevelop_files",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT UNSIGNED",
-        "length": 10,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "name",
+        "type": "VARCHAR",
+        "length": 45,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
         "comments": ""
     },
@@ -6215,13 +6215,13 @@
         "comments": ""
     },
     {
-        "tableName": "updates_equilibrium",
+        "tableName": "updates_fafdevelop_files",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>id",
-        "type": "SMALLINT UNSIGNED",
-        "length": 5,
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
+        "type": "INT UNSIGNED",
+        "length": 10,
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "null",
@@ -6475,17 +6475,17 @@
         "comments": ""
     },
     {
-        "tableName": "teamkills",
+        "tableName": "updates_blackops_files",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "gametime",
-        "type": "MEDIUMINT UNSIGNED",
-        "length": 8,
+        "name": "md5",
+        "type": "VARCHAR",
+        "length": 45,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>time of game in seconds when tk was performed<\/p>"
+        "comments": ""
     },
     {
         "tableName": "uniqueid",
@@ -6505,12 +6505,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "version",
-        "type": "INT",
-        "length": 10,
+        "name": "obselete",
+        "type": "BIT",
+        "length": 1,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -6581,11 +6581,11 @@
     {
         "tableName": "updates_fafdevelop_files",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>fileId",
-        "type": "SMALLINT UNSIGNED",
-        "length": 5,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "md5",
+        "type": "VARCHAR",
+        "length": 45,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
@@ -6839,17 +6839,17 @@
         "comments": ""
     },
     {
-        "tableName": "teamkills",
+        "tableName": "updates_blackops_files",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>teamkiller",
-        "type": "MEDIUMINT UNSIGNED",
-        "length": 8,
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>fileId",
+        "type": "SMALLINT UNSIGNED",
+        "length": 5,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>login of the player who performed the teamkill<\/p>"
+        "comments": ""
     },
     {
         "tableName": "mod_version_reviews_summary",
@@ -6917,17 +6917,17 @@
         "comments": ""
     },
     {
-        "tableName": "updates_blackops_files",
+        "tableName": "teamkills",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "md5",
-        "type": "VARCHAR",
-        "length": 45,
+        "name": "gametime",
+        "type": "MEDIUMINT UNSIGNED",
+        "length": 8,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>time of game in seconds when tk was performed<\/p>"
     },
     {
         "tableName": "league_schedule",
@@ -7337,13 +7337,13 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "name",
-        "type": "VARCHAR",
-        "length": 255,
+        "name": "order",
+        "type": "SMALLINT UNSIGNED",
+        "length": 5,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "null",
-        "comments": ""
+        "defaultValue": "0",
+        "comments": "<p>Order in the featured mods list<\/p>"
     },
     {
         "tableName": "map_version_review",
@@ -7710,17 +7710,17 @@
         "comments": ""
     },
     {
-        "tableName": "updates_blackops_files",
+        "tableName": "teamkills",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "name",
-        "type": "VARCHAR",
-        "length": 45,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>game_id",
+        "type": "INT UNSIGNED",
+        "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>game-id where teamkill was performed<\/p>"
     },
     {
         "tableName": "uniqueid_exempt",
@@ -7996,15 +7996,15 @@
         "comments": ""
     },
     {
-        "tableName": "league",
+        "tableName": "map_version_reviews_summary",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT UNSIGNED",
-        "length": 10,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>map_version_id",
+        "type": "MEDIUMINT UNSIGNED",
+        "length": 8,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
         "comments": ""
     },
@@ -8438,16 +8438,16 @@
         "comments": ""
     },
     {
-        "tableName": "teamkills",
+        "tableName": "updates_blackops_files",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "reported_at",
-        "type": "DATETIME",
-        "length": 26,
+        "name": "obselete",
+        "type": "BIT",
+        "length": 1,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "CURRENT_TIMESTAMP",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -8667,9 +8667,9 @@
         "type": "MEDIUMINT UNSIGNED",
         "length": 8,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>This table is managed by Flyway. Do not manually edit records.<\/p>"
     },
     {
         "tableName": "achievement_definitions",
@@ -8750,17 +8750,17 @@
         "comments": "<p>When this entry was created.<\/p>"
     },
     {
-        "tableName": "league",
+        "tableName": "map_version_reviews_summary",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "description",
-        "type": "MEDIUMTEXT",
-        "length": 16777215,
+        "name": "negative",
+        "type": "FLOAT",
+        "length": 12,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>The &lsquo;negative&rsquo; share of the rating<\/p>"
     },
     {
         "tableName": "updates_faf_files",
@@ -8802,14 +8802,14 @@
         "comments": "<p>URL to a square image representing the client.<\/p>"
     },
     {
-        "tableName": "ladder_map",
+        "tableName": "game_featuredMods",
         "tableType": "Table",
         "keyClass": "indexedColumn",
         "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>idmap",
-        "type": "MEDIUMINT UNSIGNED",
-        "length": 8,
-        "nullable": "",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>gamemod",
+        "type": "VARCHAR",
+        "length": 50,
+        "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
         "comments": ""
@@ -8919,17 +8919,17 @@
         "comments": ""
     },
     {
-        "tableName": "map_version_reviews_summary",
+        "tableName": "league",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "score",
-        "type": "FLOAT",
-        "length": 12,
+        "name": "create_time",
+        "type": "TIMESTAMP",
+        "length": 26,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "null",
-        "comments": "<p>The sum of all scores<\/p>"
+        "defaultValue": "CURRENT_TIMESTAMP",
+        "comments": ""
     },
     {
         "tableName": "uniqueid_exempt",
@@ -9118,13 +9118,13 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "file_extension",
-        "type": "VARCHAR",
-        "length": 3,
+        "name": "deployment_webhook",
+        "type": "MEDIUMTEXT",
+        "length": 16777215,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>A webhook to be called after successfull deployment<\/p>"
     },
     {
         "tableName": "mod_stats",
@@ -9543,13 +9543,13 @@
         "comments": ""
     },
     {
-        "tableName": "updates_equilibrium",
+        "tableName": "updates_fafdevelop_files",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "path",
-        "type": "VARCHAR",
-        "length": 45,
+        "name": "version",
+        "type": "INT",
+        "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
@@ -9993,9 +9993,9 @@
         "type": "INT UNSIGNED",
         "length": 10,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
+        "comments": "<p>This table is managed by Flyway. Do not manually edit records.<\/p>"
     },
     {
         "tableName": "global_rating_rank_view",
