@@ -1,5 +1,4 @@
 vm_exempt
-version_lobby
 updates_xtremewars_files
 updates_xtremewars
 updates_vanilla_files
@@ -46,10 +45,8 @@ messages
 lobby_admin
 ladder_map
 ladder_division
-ladder1v1_rating_rank_view
 ladder1v1_rating_distribution
 jwt_users
-global_rating_rank_view
 global_rating_distribution
 faction
 event_definitions
@@ -83,7 +80,6 @@ clan_membership
 avatars
 uniqueid_exempt
 tutorials
-table_map_features
 player_events
 name_history
 mod_version_reviews_summary
@@ -92,13 +88,13 @@ mod_reviews_summary
 map_version_reviews_summary
 map_reviews_summary
 login_log
-league_rating_range
 ladder_division_score
+ladder1v1_rating_rank_view
 ladder1v1_rating
+global_rating_rank_view
 game_reviews_summary
 coop_leaderboard
 vote
-league_schedule
 game_player_stats
 clan
 moderation_report
@@ -107,8 +103,8 @@ voting_choice
 mod_version
 game_stats
 user_group
+leaderboard
 map_version
-league
 voting_question
 mod
 map
@@ -121,6 +117,5 @@ game_validity
 avatars_list
 achievement_definitions
 voting_subject
-leaderboard
 game_featuredMods
 login

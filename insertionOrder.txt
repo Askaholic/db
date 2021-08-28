@@ -1,6 +1,5 @@
 login
 game_featuredMods
-leaderboard
 voting_subject
 achievement_definitions
 avatars_list
@@ -13,8 +12,8 @@ uniqueid
 map
 mod
 voting_question
-league
 map_version
+leaderboard
 user_group
 game_stats
 mod_version
@@ -23,13 +22,13 @@ matchmaker_queue
 moderation_report
 clan
 game_player_stats
-league_schedule
 vote
 coop_leaderboard
 game_reviews_summary
+global_rating_rank_view
 ladder1v1_rating
+ladder1v1_rating_rank_view
 ladder_division_score
-league_rating_range
 login_log
 map_reviews_summary
 map_version_reviews_summary
@@ -38,7 +37,6 @@ mod_stats
 mod_version_reviews_summary
 name_history
 player_events
-table_map_features
 tutorials
 uniqueid_exempt
 avatars
@@ -72,10 +70,8 @@ email_domain_blacklist
 event_definitions
 faction
 global_rating_distribution
-global_rating_rank_view
 jwt_users
 ladder1v1_rating_distribution
-ladder1v1_rating_rank_view
 ladder_division
 ladder_map
 lobby_admin
@@ -122,5 +118,4 @@ updates_vanilla
 updates_vanilla_files
 updates_xtremewars
 updates_xtremewars_files
-version_lobby
 vm_exempt
