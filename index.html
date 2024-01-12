@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>faf Database</title>
+        <title>faf.faf</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
@@ -46,7 +46,7 @@
                 <nav class="navbar navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="index.html" class="navbar-brand"><b>faf</b> Database</a>
+                            <a href="index.html" class="navbar-brand"><b>faf</b></a><span class="navbar-brand" style="padding-left: 0">.faf</span>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
                         </div>
 
@@ -77,8 +77,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="callout callout-info">
-                                <h4>SchemaSpy Analysis of faf</h4>
-                                <p>Generated on Sat Oct 23 22:08 GMT 2021</p>
+                                <h4>SchemaSpy Analysis of faf.faf</h4>
+                                <p>Generated on Fri Jan 12 05:40 GMT 2024</p>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                                 <span class="info-box-icon bg-aqua"><i class="fa fa-table"></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">TABLES</span>
-                                    <span class="info-box-number">121</span>
+                                    <span class="info-box-number">114</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -118,7 +118,7 @@
                                 <span class="info-box-icon bg-green"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">COLUMNS</span>
-                                    <span class="info-box-number">761</span>
+                                    <span class="info-box-number">745</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -130,7 +130,7 @@
                                 <span class="info-box-icon bg-yellow"><i class="ion ion-key"></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Constraints</span>
-                                    <span class="info-box-number">92</span>
+                                    <span class="info-box-number">91</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -142,7 +142,7 @@
                                 <span class="info-box-icon bg-red-active"><i class="fa fa-question" aria-hidden="true"></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">Anomalies</span>
-                                    <span class="info-box-number">2</span>
+                                    <span class="info-box-number">22</span>
                                 </div>
                                 <!-- /.info-box-content -->
                             </div>
@@ -168,7 +168,7 @@
                             <span class="label label-primary pull-right"><i class="fa fa-cog fa-2x"></i></span>
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                            <p>Database Type: MySQL - 5.5.5-10.6.4-MariaDB-1:10.6.4+maria~focal</p>
+                            <p>Database Type: MySQL - 5.5.5-10.6.16-MariaDB-1:10.6.16+maria~ubu2004</p>
                         </div><!-- /.box-body -->
                     </div>
                     <div class="box box-primary">
@@ -177,7 +177,13 @@
                             <span class="label label-primary pull-right"><i class="fa fa-database fa-2x"></i></span>
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                            <table id="database_objects" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="database_objects"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="50"
+                                    data-length-change="false">
                                 <thead>
                                     <tr>
                                         <th valign="bottom">Table / View</th>
@@ -220,7 +226,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_xtremewars.html">updates_xtremewars</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -229,7 +235,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_koth.html">updates_koth</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -245,38 +251,29 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/ladder_map.html">ladder_map</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">35</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/matchmaker_queue.html">matchmaker_queue</a></td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">10</td>
-                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">5</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"><p>A matchmaker queue specifying which featured mod will be played, which map pools will be drawn from, and which leaderboard will be used to look up and update a player''s rating.</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/coop_map.html">coop_map</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">6</td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">8</td>
                                         <td class="detail" align="right">35</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/login.html">login</a></td>
-                                        <td class="detail" align="right">40</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">11</td>
-                                        <td class="detail" align="right">23920</td>
+                                        <td class="detail" align="right">35</td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">12</td>
+                                        <td class="detail" align="right">23890</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"><p>login</p></td>
                                     </tr>
@@ -290,20 +287,20 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/featured_mods_owners.html">featured_mods_owners</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">3</td>
-                                        <td class="detail" align="right">9</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_gw_files.html">updates_gw_files</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">6</td>
                                         <td class="detail" align="right">30</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/featured_mods_owners.html">featured_mods_owners</a></td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">3</td>
+                                        <td class="detail" align="right">9</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -315,15 +312,6 @@
                                         <td class="detail" align="right">15</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/global_rating_rank_view.html">global_rating_rank_view</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">6</td>
-                                        <td class="detail" align="right">1673</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"><p>Materialized view including ranks (player position) for global_rating</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/map_pool.html">map_pool</a></td>
@@ -353,13 +341,13 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/oauth_tokens.html">oauth_tokens</a></td>
+                                        <td class="detail"><a href="tables/coop_scenario.html">coop_scenario</a></td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">8</td>
+                                        <td class="detail" align="right">6</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
+                                        <td class="comment detail" style="display: table-cell;"><p>A scenario is the parent of one or multiple related missions.</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/table_map_comments.html">table_map_comments</a></td>
@@ -380,11 +368,11 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/updates_blackops_files.html">updates_blackops_files</a></td>
+                                        <td class="detail"><a href="tables/teamkills.html">teamkills</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">6</td>
-                                        <td class="detail" align="right">7</td>
+                                        <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -398,20 +386,20 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/teamkills.html">teamkills</a></td>
+                                        <td class="detail"><a href="tables/updates_blackops_files.html">updates_blackops_files</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">3</td>
+                                        <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">6</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">7</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/map.html">map</a></td>
                                         <td class="detail" align="right">3</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">11</td>
-                                        <td class="detail" align="right">9204</td>
+                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">12</td>
+                                        <td class="detail" align="right">9333</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -427,7 +415,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_blackops.html">updates_blackops</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">Table</td>
@@ -443,15 +431,6 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/ladder_division_score.html">ladder_division_score</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">8</td>
-                                        <td class="detail" align="right">12877</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/voting_choice.html">voting_choice</a></td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">1</td>
@@ -463,18 +442,9 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_fafbeta.html">updates_fafbeta</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">13</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/clan.html">clan</a></td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">10</td>
-                                        <td class="detail" align="right">1477</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -488,6 +458,15 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/clan.html">clan</a></td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">10</td>
+                                        <td class="detail" align="right">1477</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/faction.html">faction</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
@@ -497,47 +476,29 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/ladder1v1_rating.html">ladder1v1_rating</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">7</td>
-                                        <td class="detail" align="right">23424</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/ladder_division.html">ladder_division</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">4</td>
-                                        <td class="detail" align="right">25</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/mod_reviews_summary.html">mod_reviews_summary</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">7</td>
+                                        <td class="detail" align="right">8</td>
                                         <td class="detail" align="right">495</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/global_rating.html">global_rating</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">6</td>
-                                        <td class="detail" align="right">22901</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_labwars.html">updates_labwars</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/messages.html">messages</a></td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">5</td>
+                                        <td class="detail" align="right">443</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -551,22 +512,13 @@
                                         <td class="comment detail" style="display: table-cell;"><p>List of all available avatars</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/messages.html">messages</a></td>
+                                        <td class="detail"><a href="tables/service_links.html">service_links</a></td>
                                         <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">6</td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">5</td>
-                                        <td class="detail" align="right">443</td>
                                         <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/oauth_clients.html">oauth_clients</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">9</td>
-                                        <td class="detail" align="right">14</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
+                                        <td class="comment detail" style="display: table-cell;"><p>table representing the links to various services</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_xtremewars_files.html">updates_xtremewars_files</a></td>
@@ -591,7 +543,7 @@
                                         <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">15</td>
-                                        <td class="detail" align="right">27290</td>
+                                        <td class="detail" align="right">10970</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -605,18 +557,9 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/global_rating_distribution.html">global_rating_distribution</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">33</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_tutorials.html">updates_tutorials</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">6</td>
                                         <td class="detail" align="right">Table</td>
@@ -641,15 +584,6 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/ladder1v1_rating_distribution.html">ladder1v1_rating_distribution</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">31</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/group_permission_assignment.html">group_permission_assignment</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">2</td>
@@ -657,15 +591,6 @@
                                         <td class="detail" align="right">106</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"><p>Connects groups (user_group) and permissions (group_permission)</p></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/lobby_admin.html">lobby_admin</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">12</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_balancetesting_files.html">updates_balancetesting_files</a></td>
@@ -679,7 +604,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_coop.html">updates_coop</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">22</td>
                                         <td class="detail" align="right">Table</td>
@@ -690,14 +615,14 @@
                                         <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">25</td>
+                                        <td class="detail" align="right">26</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_diamond.html">updates_diamond</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -715,7 +640,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_claustrophobia.html">updates_claustrophobia</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -726,7 +651,7 @@
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">10</td>
-                                        <td class="detail" align="right">23</td>
+                                        <td class="detail" align="right">35</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -742,7 +667,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_faf.html">updates_faf</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">19</td>
                                         <td class="detail" align="right">Table</td>
@@ -758,6 +683,15 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/map_version.html">map_version</a></td>
+                                        <td class="detail" align="right">7</td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">15</td>
+                                        <td class="detail" align="right">16215</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/tutorial_category.html">tutorial_category</a></td>
                                         <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">0</td>
@@ -767,19 +701,10 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/map_version.html">map_version</a></td>
-                                        <td class="detail" align="right">7</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">15</td>
-                                        <td class="detail" align="right">16721</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/map_reviews_summary.html">map_reviews_summary</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">7</td>
+                                        <td class="detail" align="right">8</td>
                                         <td class="detail" align="right">941</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
@@ -794,18 +719,9 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/jwt_users.html">jwt_users</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">3</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_equilibrium.html">updates_equilibrium</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">10</td>
                                         <td class="detail" align="right">Table</td>
@@ -821,9 +737,18 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/license.html">license</a></td>
+                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">9</td>
+                                        <td class="detail" align="right">4</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"><p>Copyright licenses to be picked for uploaded content</p></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_vanilla.html">updates_vanilla</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -866,11 +791,20 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/coturn_servers.html">coturn_servers</a></td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">7</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"><p>List of coturn servers to be propagated to ICE adapters</p></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/mod_version.html">mod_version</a></td>
                                         <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">12</td>
-                                        <td class="detail" align="right">4087</td>
+                                        <td class="detail" align="right">3836</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -902,6 +836,15 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/map_version_reviews_summary.html">map_version_reviews_summary</a></td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">8</td>
+                                        <td class="detail" align="right">1034</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"><p>Summary of all map version reviews. Entries are created and updated by triggers.</p></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/uniqueid.html">uniqueid</a></td>
                                         <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">0</td>
@@ -909,15 +852,6 @@
                                         <td class="detail" align="right">333</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/map_version_reviews_summary.html">map_version_reviews_summary</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">7</td>
-                                        <td class="detail" align="right">1034</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"><p>Summary of all map version reviews. Entries are created and updated by triggers.</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/winner_for_voting_question.html">winner_for_voting_question</a></td>
@@ -936,15 +870,6 @@
                                         <td class="detail" align="right">57</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/ladder1v1_rating_rank_view.html">ladder1v1_rating_rank_view</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">7</td>
-                                        <td class="detail" align="right">287</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"><p>Materialized view including ranks (player position) for ladder1v1_rating</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/vm_exempt.html">vm_exempt</a></td>
@@ -1030,7 +955,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_phantomx.html">updates_phantomx</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -1075,7 +1000,7 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_murderparty.html">updates_murderparty</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -1085,7 +1010,7 @@
                                         <td class="detail"><a href="tables/game_reviews_summary.html">game_reviews_summary</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">7</td>
+                                        <td class="detail" align="right">8</td>
                                         <td class="detail" align="right">35</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"><p>Summary of all game reviews. Entries are created and updated by triggers.</p></td>
@@ -1093,8 +1018,8 @@
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/mod.html">mod</a></td>
                                         <td class="detail" align="right">3</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">9</td>
+                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">11</td>
                                         <td class="detail" align="right">1419</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
@@ -1136,15 +1061,6 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/matchmaker_queue_game.html">matchmaker_queue_game</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">2</td>
-                                        <td class="detail" align="right">38</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/game_review.html">game_review</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">2</td>
@@ -1154,11 +1070,11 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/updates_civilians.html">updates_civilians</a></td>
+                                        <td class="detail"><a href="tables/matchmaker_queue_game.html">matchmaker_queue_game</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">38</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
@@ -1172,6 +1088,15 @@
                                         <td class="comment detail" style="display: table-cell;"><p>ban can be revoked, see ban_revoke</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/terms_of_service.html">terms_of_service</a></td>
+                                        <td class="detail" align="right">3</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">3</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_fafbeta_files.html">updates_fafbeta_files</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
@@ -1181,9 +1106,18 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/updates_civilians.html">updates_civilians</a></td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">3</td>
+                                        <td class="detail" align="right">2</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_gw.html">updates_gw</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">2</td>
                                         <td class="detail" align="right">Table</td>
@@ -1194,14 +1128,14 @@
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">4</td>
-                                        <td class="detail" align="right">22542</td>
+                                        <td class="detail" align="right">22581</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_nomads.html">updates_nomads</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">13</td>
                                         <td class="detail" align="right">Table</td>
@@ -1226,27 +1160,27 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/mod_version_reviews_summary.html">mod_version_reviews_summary</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">1</td>
-                                        <td class="detail" align="right">7</td>
-                                        <td class="detail" align="right">762</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"><p>Summary of all mod version reviews. Entries are created and updated by triggers.</p></td>
-                                    </tr>
-                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_fafdevelop.html">updates_fafdevelop</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">13</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/mod_version_reviews_summary.html">mod_version_reviews_summary</a></td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
+                                        <td class="detail" align="right">8</td>
+                                        <td class="detail" align="right">762</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"><p>Summary of all mod version reviews. Entries are created and updated by triggers.</p></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_balancetesting.html">updates_balancetesting</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">12</td>
                                         <td class="detail" align="right">Table</td>
@@ -1262,6 +1196,15 @@
                                         <td class="comment detail" style="display: table-cell;"><p>Map sub pool of a rating range for a matchmaker queue</p></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
+                                        <td class="detail"><a href="tables/account_deletion_requests.html">account_deletion_requests</a></td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">8</td>
+                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">Table</td>
+                                        <td class="comment detail" style="display: table-cell;"></td>
+                                    </tr>
+                                    <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/updates_coop_files.html">updates_coop_files</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
@@ -1272,17 +1215,17 @@
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/leaderboard.html">leaderboard</a></td>
-                                        <td class="detail" align="right">4</td>
+                                        <td class="detail" align="right">23</td>
                                         <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">7</td>
-                                        <td class="detail" align="right">3</td>
+                                        <td class="detail" align="right">6</td>
                                         <td class="detail" align="right">Table</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
                                         <td class="detail"><a href="tables/table_mod.html">table_mod</a></td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
+                                        <td class="detail" align="right">1</td>
                                         <td class="detail" align="right">15</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">View</td>
@@ -1298,19 +1241,19 @@
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/user_agent_stats.html">user_agent_stats</a></td>
+                                        <td class="detail"><a href="tables/map_statistic.html">map_statistic</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">3</td>
+                                        <td class="detail" align="right">4</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">View</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
                                     </tr>
                                     <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/map_statistic.html">map_statistic</a></td>
+                                        <td class="detail"><a href="tables/user_agent_stats.html">user_agent_stats</a></td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">4</td>
+                                        <td class="detail" align="right">3</td>
                                         <td class="detail" align="right">0</td>
                                         <td class="detail" align="right">View</td>
                                         <td class="comment detail" style="display: table-cell;"></td>
@@ -1360,7 +1303,7 @@
                         <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
                         <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
                     </div>
-                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
                 </div>
                 <!-- /.container -->
             </footer>

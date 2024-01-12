@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>login - faf Database</title>
+        <title>login - faf.faf</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
@@ -46,7 +46,7 @@
                 <nav class="navbar navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="../index.html" class="navbar-brand"><b>faf</b> Database</a>
+                            <a href="../index.html" class="navbar-brand"><b>faf</b></a><span class="navbar-brand" style="padding-left: 0">.faf</span>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
                         </div>
 
@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>login</h1><p><span id="recordNumber">23920</span> rows</p><br />
+                    <h1>login</h1><p><span id="recordNumber">23890</span> rows</p><br />
                     <div class="box box-primary">
                         <div class="box-header with-border">
                             <i class="fa fa-file-text-o"></i>
@@ -100,7 +100,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead align='left'>
                                 <tr>
                                     <th>Column</th>
@@ -126,155 +132,173 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
                                                 <td title="avatars.idUser references login.id via avatars_ibfk_1"><a href='avatars.html'>avatars</a><span class='relatedKey'>.idUser</span></td>
-                                                <td class="constraint detail">avatars_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">avatars_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="ban.author_id references login.id via ban_revoke_author"><a href='ban.html'>ban</a><span class='relatedKey'>.author_id</span></td>
-                                                <td class="constraint detail">ban_revoke_author<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">ban_revoke_author</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="ban.player_id references login.id via ban_ibfk_1"><a href='ban.html'>ban</a><span class='relatedKey'>.player_id</span></td>
-                                                <td class="constraint detail">ban_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">ban_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="clan.founder_id references login.id via clan_ibfk_1"><a href='clan.html'>clan</a><span class='relatedKey'>.founder_id</span></td>
-                                                <td class="constraint detail">clan_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">clan_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="clan.leader_id references login.id via clan_ibfk_2"><a href='clan.html'>clan</a><span class='relatedKey'>.leader_id</span></td>
-                                                <td class="constraint detail">clan_ibfk_2<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">clan_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="clan_membership.player_id references login.id via clan_membership_ibfk_2"><a href='clan_membership.html'>clan_membership</a><span class='relatedKey'>.player_id</span></td>
-                                                <td class="constraint detail">clan_membership_ibfk_2<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">clan_membership_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="featured_mods_owners.uid references login.id via featured_mods_owners_ibfk_2"><a href='featured_mods_owners.html'>featured_mods_owners</a><span class='relatedKey'>.uid</span></td>
-                                                <td class="constraint detail">featured_mods_owners_ibfk_2<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">featured_mods_owners_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="friends_and_foes.subject_id references login.id via friends_and_foes_subject_login_id_fk"><a href='friends_and_foes.html'>friends_and_foes</a><span class='relatedKey'>.subject_id</span></td>
-                                                <td class="constraint detail">friends_and_foes_subject_login_id_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">friends_and_foes_subject_login_id_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="friends_and_foes.user_id references login.id via friends_and_foes_user_login_id_fk"><a href='friends_and_foes.html'>friends_and_foes</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">friends_and_foes_user_login_id_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">friends_and_foes_user_login_id_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="game_player_stats.playerId references login.id via fk_game_player_stats_player"><a href='game_player_stats.html'>game_player_stats</a><span class='relatedKey'>.playerId</span></td>
-                                                <td class="constraint detail">fk_game_player_stats_player<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">fk_game_player_stats_player</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="game_review.user_id references login.id via game_review_ibfk_1"><a href='game_review.html'>game_review</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">game_review_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">game_review_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="game_stats.host references login.id via fk_game_stats_host"><a href='game_stats.html'>game_stats</a><span class='relatedKey'>.host</span></td>
-                                                <td class="constraint detail">fk_game_stats_host<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="global_rating.id references login.id via id_constraint"><a href='global_rating.html'>global_rating</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">id_constraint<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="global_rating_rank_view.id references login.id via global_rating_rank_view_login_id_fk"><a href='global_rating_rank_view.html'>global_rating_rank_view</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">global_rating_rank_view_login_id_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="ladder1v1_rating.id references login.id via ladder1v1_rating_ibfk_1"><a href='ladder1v1_rating.html'>ladder1v1_rating</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">ladder1v1_rating_ibfk_1<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="ladder1v1_rating_rank_view.id references login.id via ladder1v1_rating_rank_view_login_id_fk"><a href='ladder1v1_rating_rank_view.html'>ladder1v1_rating_rank_view</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">ladder1v1_rating_rank_view_login_id_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td title="ladder_division_score.user_id references login.id via ladder_division_score_ibfk_1"><a href='ladder_division_score.html'>ladder_division_score</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">ladder_division_score_ibfk_1<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">fk_game_stats_host</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="leaderboard_rating.login_id references login.id via leaderboard_rating_ibfk_1"><a href='leaderboard_rating.html'>leaderboard_rating</a><span class='relatedKey'>.login_id</span></td>
-                                                <td class="constraint detail">leaderboard_rating_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">leaderboard_rating_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="login_log.login_id references login.id via login_log_login_id_fk"><a href='login_log.html'>login_log</a><span class='relatedKey'>.login_id</span></td>
-                                                <td class="constraint detail">login_log_login_id_fk<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">login_log_login_id_fk</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="map.author references login.id via author"><a href='map.html'>map</a><span class='relatedKey'>.author</span></td>
-                                                <td class="constraint detail">author<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">author</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="map_version_review.user_id references login.id via map_version_review_ibfk_1"><a href='map_version_review.html'>map_version_review</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">map_version_review_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">map_version_review_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="mod.uploader references login.id via mod_ibfk_1"><a href='mod.html'>mod</a><span class='relatedKey'>.uploader</span></td>
-                                                <td class="constraint detail">mod_ibfk_1<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">mod_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="mod_version_review.user_id references login.id via mod_version_review_ibfk_1"><a href='mod_version_review.html'>mod_version_review</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">mod_version_review_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">mod_version_review_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="moderation_report.last_moderator references login.id via moderation_report_ibfk_1"><a href='moderation_report.html'>moderation_report</a><span class='relatedKey'>.last_moderator</span></td>
-                                                <td class="constraint detail">moderation_report_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">moderation_report_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="moderation_report.reporter_id references login.id via reporter_id_of_moderation_report"><a href='moderation_report.html'>moderation_report</a><span class='relatedKey'>.reporter_id</span></td>
-                                                <td class="constraint detail">reporter_id_of_moderation_report<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">reporter_id_of_moderation_report</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="name_history.user_id references login.id via name_history_ibfk_1"><a href='name_history.html'>name_history</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">name_history_ibfk_1<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">name_history_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="player_achievements.player_id references login.id via fk_login"><a href='player_achievements.html'>player_achievements</a><span class='relatedKey'>.player_id</span></td>
-                                                <td class="constraint detail">fk_login<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">fk_login</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="player_events.player_id references login.id via player_events_login_id_fk"><a href='player_events.html'>player_events</a><span class='relatedKey'>.player_id</span></td>
-                                                <td class="constraint detail">player_events_login_id_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">player_events_login_id_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="reported_user.player_id references login.id via player_id_of_reported_user"><a href='reported_user.html'>reported_user</a><span class='relatedKey'>.player_id</span></td>
-                                                <td class="constraint detail">player_id_of_reported_user<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">player_id_of_reported_user</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="service_links.user_id references login.id via user_ibfk_1"><a href='service_links.html'>service_links</a><span class='relatedKey'>.user_id</span></td>
+                                                <td class="constraint detail">user_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="table_map_comments.user_id references login.id via table_map_comments_ibfk_2"><a href='table_map_comments.html'>table_map_comments</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">table_map_comments_ibfk_2<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">table_map_comments_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="teamkills.teamkiller references login.id via teamkiller_fk"><a href='teamkills.html'>teamkills</a><span class='relatedKey'>.teamkiller</span></td>
-                                                <td class="constraint detail">teamkiller_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">teamkiller_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="teamkills.victim references login.id via victim_fk"><a href='teamkills.html'>teamkills</a><span class='relatedKey'>.victim</span></td>
-                                                <td class="constraint detail">victim_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">victim_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="unique_id_users.user_id references login.id via FK_unique_id_users_user_id_to_login"><a href='unique_id_users.html'>unique_id_users</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">FK_unique_id_users_user_id_to_login<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">FK_unique_id_users_user_id_to_login</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="uniqueid_exempt.user_id references login.id via FK_uniqueid_exempt_user_id_to_login"><a href='uniqueid_exempt.html'>uniqueid_exempt</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">FK_uniqueid_exempt_user_id_to_login<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">FK_uniqueid_exempt_user_id_to_login</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="user_group_assignment.user_id references login.id via user_group_assignment_ibfk_1"><a href='user_group_assignment.html'>user_group_assignment</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">user_group_assignment_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">user_group_assignment_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="user_notes.author references login.id via user_notes_author_login_id_fk"><a href='user_notes.html'>user_notes</a><span class='relatedKey'>.author</span></td>
-                                                <td class="constraint detail">user_notes_author_login_id_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">user_notes_author_login_id_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="user_notes.user_id references login.id via user_notes_user_login_id_fk"><a href='user_notes.html'>user_notes</a><span class='relatedKey'>.user_id</span></td>
-                                                <td class="constraint detail">user_notes_user_login_id_fk<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">user_notes_user_login_id_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="vote.player_id references login.id via player_of_vote"><a href='vote.html'>vote</a><span class='relatedKey'>.player_id</span></td>
-                                                <td class="constraint detail">player_of_vote<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">player_of_vote</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -372,7 +396,7 @@
                                 <tr>
                                     <td><span id="create_time">create_time</span></td>
                                     <td>TIMESTAMP</td>
-                                    <td>26</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>current_timestamp()</td>
@@ -389,7 +413,7 @@
                                 <tr>
                                     <td><span id="update_time">update_time</span></td>
                                     <td>TIMESTAMP</td>
-                                    <td>26</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>current_timestamp()</td>
@@ -423,7 +447,7 @@
                                 <tr>
                                     <td><span id="last_login">last_login</span></td>
                                     <td>TIMESTAMP</td>
-                                    <td>26</td>
+                                    <td>19</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -454,6 +478,28 @@
                                     </td>
                                     <td><p>Username on gog.com</p></td>
                                 </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="accepted_tos">accepted_tos</span></td>
+                                    <td>SMALLINT</td>
+                                    <td>5</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="login.accepted_tos references terms_of_service.version via login_terms_of_service_version_fk"><a href='terms_of_service.html'>terms_of_service</a><span class='relatedKey'>.version</span></td>
+                                                <td class="constraint detail">login_terms_of_service_version_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td><p>Point to the last ToS the user has explicitely accepted</p></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -468,7 +514,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead>
                                 <tr>
                                     <th>Constraint Name</th>
@@ -489,6 +541,12 @@
                                     <td>Must be unique</td>
                                     <td><span title='Ascending'>Asc</span></td>
                                     <td>gog_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>login_terms_of_service_version_fk</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>accepted_tos</td>
                                 </tr>
                                 <tr>
                                     <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> steamid</td>
@@ -533,190 +591,181 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="446,5,602,181">
-<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="5,2097,331,2489">
-<area shape="rect" id="node3" href="ban.html" target="_top" title="ban" alt="" coords="1010,136,1197,341">
-<area shape="rect" id="node4" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="717,271,963,476">
-<area shape="rect" id="node10" href="game_stats.html" target="_top" title="game_stats" alt="" coords="435,625,613,977">
-<area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="424,1139,624,1373">
-<area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="729,1260,951,1436">
-<area shape="rect" id="node7" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="393,1427,655,1579">
-<area shape="rect" id="node8" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="418,1596,630,1743">
-<area shape="rect" id="node9" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="727,493,953,757">
-<area shape="rect" id="node11" href="game_review.html" target="_top" title="game_review" alt="" coords="747,775,933,951">
-<area shape="rect" id="node12" href="global_rating.html" target="_top" title="global_rating" alt="" coords="432,1760,616,2000">
-<area shape="rect" id="node13" href="global_rating_rank_view.html" target="_top" title="global_rating_rank_view" alt="" coords="391,2017,657,2164">
-<area shape="rect" id="node14" href="ladder1v1_rating.html" target="_top" title="ladder1v1_rating" alt="" coords="417,2181,631,2445">
-<area shape="rect" id="node15" href="ladder1v1_rating_rank_view.html" target="_top" title="ladder1v1_rating_rank_view" alt="" coords="375,2463,673,2609">
-<area shape="rect" id="node16" href="ladder_division_score.html" target="_top" title="ladder_division_score" alt="" coords="400,2627,648,2832">
-<area shape="rect" id="node17" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="408,2849,640,3025">
-<area shape="rect" id="node18" href="login_log.html" target="_top" title="login_log" alt="" coords="449,3043,599,3248">
-<area shape="rect" id="node19" href="map.html" target="_top" title="map" alt="" coords="413,3265,635,3471">
-<area shape="rect" id="node20" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="404,3488,644,3664">
-<area shape="rect" id="node21" href="mod.html" target="_top" title="mod" alt="" coords="413,3681,635,3887">
-<area shape="rect" id="node22" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="404,3904,644,4080">
-<area shape="rect" id="node23" href="name_history.html" target="_top" title="name_history" alt="" coords="429,4097,619,4244">
-<area shape="rect" id="node24" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="400,4261,648,4467">
-<area shape="rect" id="node25" href="player_events.html" target="_top" title="player_events" alt="" coords="428,4484,620,4660">
-<area shape="rect" id="node26" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1007,740,1200,916">
-<area shape="rect" id="node27" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="398,4677,650,4853">
-<area shape="rect" id="node28" href="teamkills.html" target="_top" title="teamkills" alt="" coords="761,968,919,1173">
-<area shape="rect" id="node29" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="421,4871,627,5017">
-<area shape="rect" id="node30" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="414,5035,634,5152">
-<area shape="rect" id="node31" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="393,5169,655,5345">
-<area shape="rect" id="node32" href="user_notes.html" target="_top" title="user_notes" alt="" coords="441,5363,607,5568">
-<area shape="rect" id="node33" href="vote.html" target="_top" title="vote" alt="" coords="431,5585,617,5761">
+<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="691,5,840,181">
+<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="261,1705,588,2127">
+<area shape="rect" id="node13" href="terms_of_service.html" target="_top" title="terms_of_service" alt="" coords="5,2031,217,2177">
+<area shape="rect" id="node3" href="ban.html" target="_top" title="ban" alt="" coords="1235,136,1421,341">
+<area shape="rect" id="node4" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="943,271,1188,476">
+<area shape="rect" id="node10" href="game_stats.html" target="_top" title="game_stats" alt="" coords="676,625,855,977">
+<area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="665,1139,865,1373">
+<area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="955,1259,1175,1435">
+<area shape="rect" id="node7" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="633,1427,897,1579">
+<area shape="rect" id="node8" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="659,1596,872,1743">
+<area shape="rect" id="node9" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="952,493,1179,757">
+<area shape="rect" id="node11" href="game_review.html" target="_top" title="game_review" alt="" coords="973,775,1157,951">
+<area shape="rect" id="node12" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="649,1760,881,1936">
+<area shape="rect" id="node14" href="login_log.html" target="_top" title="login_log" alt="" coords="691,1953,840,2159">
+<area shape="rect" id="node15" href="map.html" target="_top" title="map" alt="" coords="654,2176,877,2411">
+<area shape="rect" id="node16" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="645,2428,886,2604">
+<area shape="rect" id="node17" href="mod.html" target="_top" title="mod" alt="" coords="654,2621,877,2856">
+<area shape="rect" id="node18" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="645,2873,886,3049">
+<area shape="rect" id="node19" href="name_history.html" target="_top" title="name_history" alt="" coords="671,3067,859,3213">
+<area shape="rect" id="node20" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="641,3231,889,3436">
+<area shape="rect" id="node21" href="player_events.html" target="_top" title="player_events" alt="" coords="671,3453,860,3629">
+<area shape="rect" id="node22" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1232,740,1424,916">
+<area shape="rect" id="node23" href="service_links.html" target="_top" title="service_links" alt="" coords="675,3647,855,3852">
+<area shape="rect" id="node24" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="639,3869,892,4045">
+<area shape="rect" id="node25" href="teamkills.html" target="_top" title="teamkills" alt="" coords="989,968,1142,1173">
+<area shape="rect" id="node26" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="662,4063,869,4209">
+<area shape="rect" id="node27" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="657,4227,874,4344">
+<area shape="rect" id="node28" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="632,4361,899,4537">
+<area shape="rect" id="node29" href="user_notes.html" target="_top" title="user_notes" alt="" coords="683,4555,848,4760">
+<area shape="rect" id="node30" href="vote.html" target="_top" title="vote" alt="" coords="673,4777,858,4953">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/login.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="446,5,602,181">
-<area shape="rect" id="node2" href="avatars_list.html" target="_top" title="avatars_list" alt="" coords="81,67,255,155">
-<area shape="rect" id="node3" href="login.html" target="_top" title="login" alt="" coords="5,1881,331,2273">
-<area shape="rect" id="node4" href="ban.html" target="_top" title="ban" alt="" coords="1712,1264,1899,1469">
-<area shape="rect" id="node5" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="1349,1404,1595,1609">
-<area shape="rect" id="node9" href="game_stats.html" target="_top" title="game_stats" alt="" coords="1065,1911,1244,2263">
-<area shape="rect" id="node6" href="clan.html" target="_top" title="clan" alt="" coords="424,2236,624,2471">
-<area shape="rect" id="node7" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="738,2331,959,2507">
-<area shape="rect" id="node8" href="coop_leaderboard.html" target="_top" title="coop_leaderboard" alt="" coords="1361,2057,1583,2145">
-<area shape="rect" id="node11" href="game_featuredMods.html" target="_top" title="game_featuredMods" alt="" coords="729,1837,969,1925">
-<area shape="rect" id="node16" href="map_version.html" target="_top" title="map_version" alt="" coords="757,2084,940,2172">
-<area shape="rect" id="node17" href="game_validity.html" target="_top" title="game_validity" alt="" coords="753,1979,945,2067">
-<area shape="rect" id="node10" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="1024,1741,1285,1893">
-<area shape="rect" id="node12" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="418,2560,630,2707">
-<area shape="rect" id="node13" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="1359,2163,1585,2427">
-<area shape="rect" id="node14" href="game_review.html" target="_top" title="game_review" alt="" coords="1379,2552,1565,2728">
-<area shape="rect" id="node15" href="game_reviews_summary.html" target="_top" title="game_reviews_summary" alt="" coords="1337,1847,1607,1935">
-<area shape="rect" id="node27" href="map.html" target="_top" title="map" alt="" coords="413,1977,635,2183">
-<area shape="rect" id="node18" href="global_rating.html" target="_top" title="global_rating" alt="" coords="432,2796,616,3036">
-<area shape="rect" id="node19" href="global_rating_rank_view.html" target="_top" title="global_rating_rank_view" alt="" coords="391,3053,657,3200">
-<area shape="rect" id="node20" href="ladder1v1_rating.html" target="_top" title="ladder1v1_rating" alt="" coords="417,3217,631,3481">
-<area shape="rect" id="node21" href="ladder1v1_rating_rank_view.html" target="_top" title="ladder1v1_rating_rank_view" alt="" coords="375,3499,673,3645">
-<area shape="rect" id="node22" href="ladder_division_score.html" target="_top" title="ladder_division_score" alt="" coords="400,199,648,404">
-<area shape="rect" id="node23" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="1689,1680,1921,1856">
-<area shape="rect" id="node24" href="leaderboard.html" target="_top" title="leaderboard" alt="" coords="1382,1741,1562,1829">
-<area shape="rect" id="node25" href="leaderboard_rating_journal.html" target="_top" title="leaderboard_rating_journal" alt="" coords="1659,2019,1952,2107">
-<area shape="rect" id="node26" href="login_log.html" target="_top" title="login_log" alt="" coords="449,457,599,663">
-<area shape="rect" id="node28" href="map_reviews_summary.html" target="_top" title="map_reviews_summary" alt="" coords="717,2189,980,2277">
-<area shape="rect" id="node29" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="1035,2280,1275,2456">
-<area shape="rect" id="node30" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="1329,1952,1615,2040">
-<area shape="rect" id="node31" href="mod.html" target="_top" title="mod" alt="" coords="413,680,635,885">
-<area shape="rect" id="node32" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="717,736,980,824">
-<area shape="rect" id="node33" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="767,631,930,719">
-<area shape="rect" id="node34" href="mod_version.html" target="_top" title="mod_version" alt="" coords="757,975,940,1063">
-<area shape="rect" id="node35" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="1035,977,1275,1153">
-<area shape="rect" id="node36" href="name_history.html" target="_top" title="name_history" alt="" coords="429,1011,619,1157">
-<area shape="rect" id="node37" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="400,3856,648,4061">
-<area shape="rect" id="node38" href="achievement_definitions.html" target="_top" title="achievement_definitions" alt="" coords="31,3917,305,4005">
-<area shape="rect" id="node39" href="player_events.html" target="_top" title="player_events" alt="" coords="428,1175,620,1351">
-<area shape="rect" id="node40" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1709,1487,1902,1663">
-<area shape="rect" id="node41" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="1029,2473,1281,2649">
-<area shape="rect" id="node42" href="teamkills.html" target="_top" title="teamkills" alt="" coords="1393,840,1551,1045">
-<area shape="rect" id="node43" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="421,4079,627,4225">
-<area shape="rect" id="node44" href="uniqueid.html" target="_top" title="uniqueid" alt="" coords="91,4111,245,4199">
-<area shape="rect" id="node45" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="414,1476,634,1593">
-<area shape="rect" id="node46" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="393,4243,655,4419">
-<area shape="rect" id="node47" href="user_group.html" target="_top" title="user_group" alt="" coords="83,4304,253,4392">
-<area shape="rect" id="node48" href="user_notes.html" target="_top" title="user_notes" alt="" coords="441,1611,607,1816">
-<area shape="rect" id="node49" href="vote.html" target="_top" title="vote" alt="" coords="431,3663,617,3839">
-<area shape="rect" id="node50" href="voting_subject.html" target="_top" title="voting_subject" alt="" coords="70,3724,266,3812">
-<area shape="rect" id="node51" href="voting_answer.html" target="_top" title="voting_answer" alt="" coords="751,3665,946,3753">
+<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="691,5,840,181">
+<area shape="rect" id="node2" href="avatars_list.html" target="_top" title="avatars_list" alt="" coords="339,67,510,155">
+<area shape="rect" id="node3" href="login.html" target="_top" title="login" alt="" coords="261,1565,588,1987">
+<area shape="rect" id="node21" href="terms_of_service.html" target="_top" title="terms_of_service" alt="" coords="5,1891,217,2037">
+<area shape="rect" id="node4" href="ban.html" target="_top" title="ban" alt="" coords="1981,1088,2102,1176">
+<area shape="rect" id="node5" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="1589,1167,1820,1255">
+<area shape="rect" id="node9" href="game_stats.html" target="_top" title="game_stats" alt="" coords="1299,1316,1469,1404">
+<area shape="rect" id="node6" href="clan.html" target="_top" title="clan" alt="" coords="685,1715,846,1803">
+<area shape="rect" id="node7" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="965,1749,1185,1837">
+<area shape="rect" id="node8" href="coop_leaderboard.html" target="_top" title="coop_leaderboard" alt="" coords="1593,1308,1816,1396">
+<area shape="rect" id="node11" href="game_featuredMods.html" target="_top" title="game_featuredMods" alt="" coords="954,1449,1197,1537">
+<area shape="rect" id="node16" href="map_version.html" target="_top" title="map_version" alt="" coords="985,753,1165,841">
+<area shape="rect" id="node17" href="game_validity.html" target="_top" title="game_validity" alt="" coords="981,1344,1170,1432">
+<area shape="rect" id="node10" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="1252,1421,1516,1573">
+<area shape="rect" id="node12" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="659,1856,872,2003">
+<area shape="rect" id="node13" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="1591,1729,1818,1817">
+<area shape="rect" id="node14" href="game_review.html" target="_top" title="game_review" alt="" coords="1613,1624,1797,1712">
+<area shape="rect" id="node15" href="game_reviews_summary.html" target="_top" title="game_reviews_summary" alt="" coords="1567,1413,1842,1501">
+<area shape="rect" id="node23" href="map.html" target="_top" title="map" alt="" coords="654,487,877,721">
+<area shape="rect" id="node18" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="1925,2320,2157,2496">
+<area shape="rect" id="node19" href="leaderboard.html" target="_top" title="leaderboard" alt="" coords="1616,1835,1793,1923">
+<area shape="rect" id="node20" href="leaderboard_rating_journal.html" target="_top" title="leaderboard_rating_journal" alt="" coords="1893,1781,2189,1869">
+<area shape="rect" id="node22" href="login_log.html" target="_top" title="login_log" alt="" coords="691,2020,840,2225">
+<area shape="rect" id="node24" href="license.html" target="_top" title="license" alt="" coords="357,463,492,551">
+<area shape="rect" id="node25" href="map_reviews_summary.html" target="_top" title="map_reviews_summary" alt="" coords="943,489,1208,577">
+<area shape="rect" id="node26" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="1263,592,1505,768">
+<area shape="rect" id="node27" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="1560,1519,1849,1607">
+<area shape="rect" id="node28" href="mod.html" target="_top" title="mod" alt="" coords="654,199,877,433">
+<area shape="rect" id="node29" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="943,107,1208,195">
+<area shape="rect" id="node30" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="995,212,1156,300">
+<area shape="rect" id="node31" href="mod_version.html" target="_top" title="mod_version" alt="" coords="985,327,1166,415">
+<area shape="rect" id="node32" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="1263,324,1505,500">
+<area shape="rect" id="node33" href="name_history.html" target="_top" title="name_history" alt="" coords="671,2243,859,2389">
+<area shape="rect" id="node34" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="641,2859,889,3064">
+<area shape="rect" id="node35" href="achievement_definitions.html" target="_top" title="achievement_definitions" alt="" coords="287,2920,563,3008">
+<area shape="rect" id="node36" href="player_events.html" target="_top" title="player_events" alt="" coords="671,2407,860,2583">
+<area shape="rect" id="node37" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1945,1215,2137,1303">
+<area shape="rect" id="node38" href="service_links.html" target="_top" title="service_links" alt="" coords="675,2600,855,2805">
+<area shape="rect" id="node39" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="1257,785,1511,961">
+<area shape="rect" id="node40" href="teamkills.html" target="_top" title="teamkills" alt="" coords="1628,1940,1781,2028">
+<area shape="rect" id="node41" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="662,3081,869,3228">
+<area shape="rect" id="node42" href="uniqueid.html" target="_top" title="uniqueid" alt="" coords="349,3113,500,3201">
+<area shape="rect" id="node43" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="657,811,874,928">
+<area shape="rect" id="node44" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="632,3245,899,3421">
+<area shape="rect" id="node45" href="user_group.html" target="_top" title="user_group" alt="" coords="341,3307,509,3395">
+<area shape="rect" id="node46" href="user_notes.html" target="_top" title="user_notes" alt="" coords="683,945,848,1151">
+<area shape="rect" id="node47" href="vote.html" target="_top" title="vote" alt="" coords="673,3439,858,3615">
+<area shape="rect" id="node48" href="voting_subject.html" target="_top" title="voting_subject" alt="" coords="327,3500,522,3588">
+<area shape="rect" id="node49" href="voting_answer.html" target="_top" title="voting_answer" alt="" coords="978,3441,1173,3529">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/login.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="446,5,602,181">
-<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="5,2097,331,2489">
-<area shape="rect" id="node3" href="ban.html" target="_top" title="ban" alt="" coords="1010,136,1197,341">
-<area shape="rect" id="node4" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="717,271,963,476">
-<area shape="rect" id="node10" href="game_stats.html" target="_top" title="game_stats" alt="" coords="435,625,613,977">
-<area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="424,1139,624,1373">
-<area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="729,1260,951,1436">
-<area shape="rect" id="node7" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="393,1427,655,1579">
-<area shape="rect" id="node8" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="418,1596,630,1743">
-<area shape="rect" id="node9" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="727,493,953,757">
-<area shape="rect" id="node11" href="game_review.html" target="_top" title="game_review" alt="" coords="747,775,933,951">
-<area shape="rect" id="node12" href="global_rating.html" target="_top" title="global_rating" alt="" coords="432,1760,616,2000">
-<area shape="rect" id="node13" href="global_rating_rank_view.html" target="_top" title="global_rating_rank_view" alt="" coords="391,2017,657,2164">
-<area shape="rect" id="node14" href="ladder1v1_rating.html" target="_top" title="ladder1v1_rating" alt="" coords="417,2181,631,2445">
-<area shape="rect" id="node15" href="ladder1v1_rating_rank_view.html" target="_top" title="ladder1v1_rating_rank_view" alt="" coords="375,2463,673,2609">
-<area shape="rect" id="node16" href="ladder_division_score.html" target="_top" title="ladder_division_score" alt="" coords="400,2627,648,2832">
-<area shape="rect" id="node17" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="408,2849,640,3025">
-<area shape="rect" id="node18" href="login_log.html" target="_top" title="login_log" alt="" coords="449,3043,599,3248">
-<area shape="rect" id="node19" href="map.html" target="_top" title="map" alt="" coords="413,3265,635,3471">
-<area shape="rect" id="node20" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="404,3488,644,3664">
-<area shape="rect" id="node21" href="mod.html" target="_top" title="mod" alt="" coords="413,3681,635,3887">
-<area shape="rect" id="node22" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="404,3904,644,4080">
-<area shape="rect" id="node23" href="name_history.html" target="_top" title="name_history" alt="" coords="429,4097,619,4244">
-<area shape="rect" id="node24" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="400,4261,648,4467">
-<area shape="rect" id="node25" href="player_events.html" target="_top" title="player_events" alt="" coords="428,4484,620,4660">
-<area shape="rect" id="node26" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1007,740,1200,916">
-<area shape="rect" id="node27" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="398,4677,650,4853">
-<area shape="rect" id="node28" href="teamkills.html" target="_top" title="teamkills" alt="" coords="761,968,919,1173">
-<area shape="rect" id="node29" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="421,4871,627,5017">
-<area shape="rect" id="node30" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="414,5035,634,5152">
-<area shape="rect" id="node31" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="393,5169,655,5345">
-<area shape="rect" id="node32" href="user_notes.html" target="_top" title="user_notes" alt="" coords="441,5363,607,5568">
-<area shape="rect" id="node33" href="vote.html" target="_top" title="vote" alt="" coords="431,5585,617,5761">
+<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="691,5,840,181">
+<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="261,1705,588,2127">
+<area shape="rect" id="node13" href="terms_of_service.html" target="_top" title="terms_of_service" alt="" coords="5,2031,217,2177">
+<area shape="rect" id="node3" href="ban.html" target="_top" title="ban" alt="" coords="1235,136,1421,341">
+<area shape="rect" id="node4" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="943,271,1188,476">
+<area shape="rect" id="node10" href="game_stats.html" target="_top" title="game_stats" alt="" coords="676,625,855,977">
+<area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="665,1139,865,1373">
+<area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="955,1259,1175,1435">
+<area shape="rect" id="node7" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="633,1427,897,1579">
+<area shape="rect" id="node8" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="659,1596,872,1743">
+<area shape="rect" id="node9" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="952,493,1179,757">
+<area shape="rect" id="node11" href="game_review.html" target="_top" title="game_review" alt="" coords="973,775,1157,951">
+<area shape="rect" id="node12" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="649,1760,881,1936">
+<area shape="rect" id="node14" href="login_log.html" target="_top" title="login_log" alt="" coords="691,1953,840,2159">
+<area shape="rect" id="node15" href="map.html" target="_top" title="map" alt="" coords="654,2176,877,2411">
+<area shape="rect" id="node16" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="645,2428,886,2604">
+<area shape="rect" id="node17" href="mod.html" target="_top" title="mod" alt="" coords="654,2621,877,2856">
+<area shape="rect" id="node18" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="645,2873,886,3049">
+<area shape="rect" id="node19" href="name_history.html" target="_top" title="name_history" alt="" coords="671,3067,859,3213">
+<area shape="rect" id="node20" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="641,3231,889,3436">
+<area shape="rect" id="node21" href="player_events.html" target="_top" title="player_events" alt="" coords="671,3453,860,3629">
+<area shape="rect" id="node22" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1232,740,1424,916">
+<area shape="rect" id="node23" href="service_links.html" target="_top" title="service_links" alt="" coords="675,3647,855,3852">
+<area shape="rect" id="node24" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="639,3869,892,4045">
+<area shape="rect" id="node25" href="teamkills.html" target="_top" title="teamkills" alt="" coords="989,968,1142,1173">
+<area shape="rect" id="node26" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="662,4063,869,4209">
+<area shape="rect" id="node27" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="657,4227,874,4344">
+<area shape="rect" id="node28" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="632,4361,899,4537">
+<area shape="rect" id="node29" href="user_notes.html" target="_top" title="user_notes" alt="" coords="683,4555,848,4760">
+<area shape="rect" id="node30" href="vote.html" target="_top" title="vote" alt="" coords="673,4777,858,4953">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/login.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="446,5,602,181">
-<area shape="rect" id="node2" href="avatars_list.html" target="_top" title="avatars_list" alt="" coords="81,67,255,155">
-<area shape="rect" id="node3" href="login.html" target="_top" title="login" alt="" coords="5,1308,331,1700">
-<area shape="rect" id="node4" href="ban.html" target="_top" title="ban" alt="" coords="1712,492,1899,697">
-<area shape="rect" id="node5" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="1349,627,1595,832">
-<area shape="rect" id="node9" href="game_stats.html" target="_top" title="game_stats" alt="" coords="1065,977,1244,1329">
-<area shape="rect" id="node6" href="clan.html" target="_top" title="clan" alt="" coords="424,844,624,1079">
-<area shape="rect" id="node7" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="738,949,959,1125">
-<area shape="rect" id="node8" href="coop_leaderboard.html" target="_top" title="coop_leaderboard" alt="" coords="1361,991,1583,1079">
-<area shape="rect" id="node11" href="game_featuredMods.html" target="_top" title="game_featuredMods" alt="" coords="729,844,969,932">
-<area shape="rect" id="node16" href="map_version.html" target="_top" title="map_version" alt="" coords="757,2860,940,2948">
-<area shape="rect" id="node17" href="game_validity.html" target="_top" title="game_validity" alt="" coords="753,1215,945,1303">
-<area shape="rect" id="node10" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="1024,808,1285,960">
-<area shape="rect" id="node12" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="418,1168,630,1315">
-<area shape="rect" id="node13" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="1359,1536,1585,1800">
-<area shape="rect" id="node14" href="game_review.html" target="_top" title="game_review" alt="" coords="1379,1201,1565,1377">
-<area shape="rect" id="node15" href="game_reviews_summary.html" target="_top" title="game_reviews_summary" alt="" coords="1337,1096,1607,1184">
-<area shape="rect" id="node27" href="map.html" target="_top" title="map" alt="" coords="413,2752,635,2957">
-<area shape="rect" id="node18" href="global_rating.html" target="_top" title="global_rating" alt="" coords="432,1404,616,1644">
-<area shape="rect" id="node19" href="global_rating_rank_view.html" target="_top" title="global_rating_rank_view" alt="" coords="391,1661,657,1808">
-<area shape="rect" id="node20" href="ladder1v1_rating.html" target="_top" title="ladder1v1_rating" alt="" coords="417,1825,631,2089">
-<area shape="rect" id="node21" href="ladder1v1_rating_rank_view.html" target="_top" title="ladder1v1_rating_rank_view" alt="" coords="375,2107,673,2253">
-<area shape="rect" id="node22" href="ladder_division_score.html" target="_top" title="ladder_division_score" alt="" coords="400,2271,648,2476">
-<area shape="rect" id="node23" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="1689,1331,1921,1507">
-<area shape="rect" id="node24" href="leaderboard.html" target="_top" title="leaderboard" alt="" coords="1382,1431,1562,1519">
-<area shape="rect" id="node25" href="leaderboard_rating_journal.html" target="_top" title="leaderboard_rating_journal" alt="" coords="1659,1533,1952,1621">
-<area shape="rect" id="node26" href="login_log.html" target="_top" title="login_log" alt="" coords="449,2529,599,2735">
-<area shape="rect" id="node28" href="map_reviews_summary.html" target="_top" title="map_reviews_summary" alt="" coords="717,2665,980,2753">
-<area shape="rect" id="node29" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="1035,2852,1275,3028">
-<area shape="rect" id="node30" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="1329,885,1615,973">
-<area shape="rect" id="node31" href="mod.html" target="_top" title="mod" alt="" coords="413,3011,635,3216">
-<area shape="rect" id="node32" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="717,3012,980,3100">
-<area shape="rect" id="node33" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="767,3117,930,3205">
-<area shape="rect" id="node34" href="mod_version.html" target="_top" title="mod_version" alt="" coords="757,3395,940,3483">
-<area shape="rect" id="node35" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="1035,3445,1275,3621">
-<area shape="rect" id="node36" href="name_history.html" target="_top" title="name_history" alt="" coords="429,3269,619,3416">
-<area shape="rect" id="node37" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="400,3856,648,4061">
-<area shape="rect" id="node38" href="achievement_definitions.html" target="_top" title="achievement_definitions" alt="" coords="31,3917,305,4005">
-<area shape="rect" id="node39" href="player_events.html" target="_top" title="player_events" alt="" coords="428,3433,620,3609">
-<area shape="rect" id="node40" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1709,748,1902,924">
-<area shape="rect" id="node41" href="table_map.html" target="_top" title="table_map" alt="" coords="767,2771,931,2835">
-<area shape="rect" id="node42" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="1029,3077,1281,3253">
-<area shape="rect" id="node43" href="teamkills.html" target="_top" title="teamkills" alt="" coords="1393,136,1551,341">
-<area shape="rect" id="node44" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="421,4079,627,4225">
-<area shape="rect" id="node45" href="uniqueid.html" target="_top" title="uniqueid" alt="" coords="91,4111,245,4199">
-<area shape="rect" id="node46" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="414,271,634,388">
-<area shape="rect" id="node47" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="393,4243,655,4419">
-<area shape="rect" id="node48" href="user_group.html" target="_top" title="user_group" alt="" coords="83,4304,253,4392">
-<area shape="rect" id="node49" href="user_notes.html" target="_top" title="user_notes" alt="" coords="441,405,607,611">
-<area shape="rect" id="node50" href="vote.html" target="_top" title="vote" alt="" coords="431,3663,617,3839">
-<area shape="rect" id="node51" href="voting_subject.html" target="_top" title="voting_subject" alt="" coords="70,3724,266,3812">
-<area shape="rect" id="node52" href="voting_answer.html" target="_top" title="voting_answer" alt="" coords="751,3665,946,3753">
+<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="691,5,840,181">
+<area shape="rect" id="node2" href="avatars_list.html" target="_top" title="avatars_list" alt="" coords="339,67,510,155">
+<area shape="rect" id="node3" href="login.html" target="_top" title="login" alt="" coords="261,1777,588,2199">
+<area shape="rect" id="node21" href="terms_of_service.html" target="_top" title="terms_of_service" alt="" coords="5,2103,217,2249">
+<area shape="rect" id="node4" href="ban.html" target="_top" title="ban" alt="" coords="1981,2491,2102,2579">
+<area shape="rect" id="node5" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="1589,2569,1820,2657">
+<area shape="rect" id="node9" href="game_stats.html" target="_top" title="game_stats" alt="" coords="1299,1943,1469,2031">
+<area shape="rect" id="node6" href="clan.html" target="_top" title="clan" alt="" coords="685,2045,846,2133">
+<area shape="rect" id="node7" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="965,2045,1185,2133">
+<area shape="rect" id="node8" href="coop_leaderboard.html" target="_top" title="coop_leaderboard" alt="" coords="1593,1968,1816,2056">
+<area shape="rect" id="node11" href="game_featuredMods.html" target="_top" title="game_featuredMods" alt="" coords="954,1835,1197,1923">
+<area shape="rect" id="node16" href="map_version.html" target="_top" title="map_version" alt="" coords="985,423,1165,511">
+<area shape="rect" id="node17" href="game_validity.html" target="_top" title="game_validity" alt="" coords="981,1940,1170,2028">
+<area shape="rect" id="node10" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="1252,1763,1516,1915">
+<area shape="rect" id="node12" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="659,811,872,957">
+<area shape="rect" id="node13" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="1591,1863,1818,1951">
+<area shape="rect" id="node14" href="game_review.html" target="_top" title="game_review" alt="" coords="1613,1652,1797,1740">
+<area shape="rect" id="node15" href="game_reviews_summary.html" target="_top" title="game_reviews_summary" alt="" coords="1567,2073,1842,2161">
+<area shape="rect" id="node23" href="map.html" target="_top" title="map" alt="" coords="654,199,877,433">
+<area shape="rect" id="node18" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="1925,1464,2157,1640">
+<area shape="rect" id="node19" href="leaderboard.html" target="_top" title="leaderboard" alt="" coords="1616,1547,1793,1635">
+<area shape="rect" id="node20" href="leaderboard_rating_journal.html" target="_top" title="leaderboard_rating_journal" alt="" coords="1893,1748,2189,1836">
+<area shape="rect" id="node22" href="login_log.html" target="_top" title="login_log" alt="" coords="691,975,840,1180">
+<area shape="rect" id="node24" href="license.html" target="_top" title="license" alt="" coords="357,463,492,551">
+<area shape="rect" id="node25" href="map_reviews_summary.html" target="_top" title="map_reviews_summary" alt="" coords="943,241,1208,329">
+<area shape="rect" id="node26" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="1263,561,1505,737">
+<area shape="rect" id="node27" href="matchmaker_queue_game.html" target="_top" title="matchmaker_queue_game" alt="" coords="1560,2179,1849,2267">
+<area shape="rect" id="node28" href="mod.html" target="_top" title="mod" alt="" coords="654,487,877,721">
+<area shape="rect" id="node29" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="943,633,1208,721">
+<area shape="rect" id="node30" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="995,528,1156,616">
+<area shape="rect" id="node31" href="mod_version.html" target="_top" title="mod_version" alt="" coords="985,775,1166,863">
+<area shape="rect" id="node32" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="1263,1037,1505,1213">
+<area shape="rect" id="node33" href="name_history.html" target="_top" title="name_history" alt="" coords="671,1197,859,1344">
+<area shape="rect" id="node34" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="641,2684,889,2889">
+<area shape="rect" id="node35" href="achievement_definitions.html" target="_top" title="achievement_definitions" alt="" coords="287,2745,563,2833">
+<area shape="rect" id="node36" href="player_events.html" target="_top" title="player_events" alt="" coords="671,1361,860,1537">
+<area shape="rect" id="node37" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1945,2617,2137,2705">
+<area shape="rect" id="node38" href="service_links.html" target="_top" title="service_links" alt="" coords="675,1751,855,1956">
+<area shape="rect" id="node39" href="table_map.html" target="_top" title="table_map" alt="" coords="996,160,1155,224">
+<area shape="rect" id="node40" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="1257,340,1511,516">
+<area shape="rect" id="node41" href="table_mod.html" target="_top" title="table_mod" alt="" coords="345,2216,504,2280">
+<area shape="rect" id="node42" href="teamkills.html" target="_top" title="teamkills" alt="" coords="1628,1757,1781,1845">
+<area shape="rect" id="node43" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="662,2907,869,3053">
+<area shape="rect" id="node44" href="uniqueid.html" target="_top" title="uniqueid" alt="" coords="349,2939,500,3027">
+<area shape="rect" id="node45" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="657,2187,874,2304">
+<area shape="rect" id="node46" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="632,3071,899,3247">
+<area shape="rect" id="node47" href="user_group.html" target="_top" title="user_group" alt="" coords="341,3132,509,3220">
+<area shape="rect" id="node48" href="user_notes.html" target="_top" title="user_notes" alt="" coords="683,2321,848,2527">
+<area shape="rect" id="node49" href="vote.html" target="_top" title="vote" alt="" coords="673,3264,858,3440">
+<area shape="rect" id="node50" href="voting_subject.html" target="_top" title="voting_subject" alt="" coords="327,3325,522,3413">
+<area shape="rect" id="node51" href="voting_answer.html" target="_top" title="voting_answer" alt="" coords="978,3267,1173,3355">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/login.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
@@ -738,7 +787,7 @@
                         <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
                         <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
                     </div>
-                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
                 </div>
                 <!-- /.container -->
             </footer>

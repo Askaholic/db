@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>mod - faf Database</title>
+        <title>mod - faf.faf</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
@@ -46,7 +46,7 @@
                 <nav class="navbar navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="../index.html" class="navbar-brand"><b>faf</b> Database</a>
+                            <a href="../index.html" class="navbar-brand"><b>faf</b></a><span class="navbar-brand" style="padding-left: 0">.faf</span>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
                         </div>
 
@@ -87,7 +87,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead align='left'>
                                 <tr>
                                     <th>Column</th>
@@ -113,15 +119,18 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
                                                 <td title="mod_reviews_summary.mod_id references mod.id via mod_reviews_summary_ibfk_1"><a href='mod_reviews_summary.html'>mod_reviews_summary</a><span class='relatedKey'>.mod_id</span></td>
-                                                <td class="constraint detail">mod_reviews_summary_ibfk_1<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">mod_reviews_summary_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="mod_stats.mod_id references mod.id via mod_stats_ibfk_1"><a href='mod_stats.html'>mod_stats</a><span class='relatedKey'>.mod_id</span></td>
-                                                <td class="constraint detail">mod_stats_ibfk_1<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">mod_stats_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                             <tr>
                                                 <td title="mod_version.mod_id references mod.id via mod_version_ibfk_1"><a href='mod_version.html'>mod_version</a><span class='relatedKey'>.mod_id</span></td>
-                                                <td class="constraint detail">mod_version_ibfk_1<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">mod_version_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -180,7 +189,8 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
                                                 <td title="mod.uploader references login.id via mod_ibfk_1"><a href='login.html'>login</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">mod_ibfk_1<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                                <td class="constraint detail">mod_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -240,7 +250,7 @@
                                 <tr>
                                     <td><span id="create_time">create_time</span></td>
                                     <td>TIMESTAMP</td>
-                                    <td>26</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>current_timestamp()</td>
@@ -257,7 +267,7 @@
                                 <tr>
                                     <td><span id="update_time">update_time</span></td>
                                     <td>TIMESTAMP</td>
-                                    <td>26</td>
+                                    <td>19</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>current_timestamp()</td>
@@ -270,6 +280,45 @@
                                         </table>
                                     </td>
                                     <td><p>When this entry was updated</p></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="license">license</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="mod.license references license.id via mod_license_id_fk"><a href='license.html'>license</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">mod_license_id_fk</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="repository_url">repository_url</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td><p>Link to repository</p></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -285,7 +334,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead>
                                 <tr>
                                     <th>Constraint Name</th>
@@ -314,6 +369,12 @@
                                     <td>average_review_score</td>
                                 </tr>
                                 <tr>
+                                    <td title='Indexed'>mod_license_id_fk</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>license</td>
+                                </tr>
+                                <tr>
                                     <td title='Indexed'>uploader</td>
                                     <td>Performance</td>
                                     <td><span title='Ascending'>Asc</span></td>
@@ -338,59 +399,111 @@
                                 <ul class="nav nav-tabs pull-left ui-sortable-handle">
                                     <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
                                     <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
                                 </ul>
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="mod.html" target="_top" title="mod" alt="" coords="224,167,623,500">
-<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="5,257,180,492">
-<area shape="rect" id="node3" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="667,5,929,152">
-<area shape="rect" id="node4" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="717,169,879,287">
-<area shape="rect" id="node5" href="mod_version.html" target="_top" title="mod_version" alt="" coords="707,304,889,539">
+<area shape="rect" id="node1" href="mod.html" target="_top" title="mod" alt="" coords="227,196,624,588">
+<area shape="rect" id="node2" href="license.html" target="_top" title="license" alt="" coords="9,515,179,632">
+<area shape="rect" id="node3" href="login.html" target="_top" title="login" alt="" coords="5,233,183,497">
+<area shape="rect" id="node4" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="668,5,933,181">
+<area shape="rect" id="node5" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="720,199,881,316">
+<area shape="rect" id="node6" href="mod_version.html" target="_top" title="mod_version" alt="" coords="710,333,891,568">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/mod.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="345,5,501,93">
-<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="5,1092,180,1327">
-<area shape="rect" id="node3" href="ban.html" target="_top" title="ban" alt="" coords="1073,81,1199,169">
-<area shape="rect" id="node4" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="683,163,913,251">
-<area shape="rect" id="node10" href="game_stats.html" target="_top" title="game_stats" alt="" coords="338,355,509,443">
-<area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="339,620,508,708">
-<area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="687,620,909,708">
-<area shape="rect" id="node7" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="293,725,554,813">
-<area shape="rect" id="node8" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="317,831,529,919">
-<area shape="rect" id="node9" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="685,268,911,356">
-<area shape="rect" id="node11" href="game_review.html" target="_top" title="game_review" alt="" coords="705,373,891,461">
-<area shape="rect" id="node12" href="global_rating.html" target="_top" title="global_rating" alt="" coords="331,936,515,1024">
-<area shape="rect" id="node13" href="global_rating_rank_view.html" target="_top" title="global_rating_rank_view" alt="" coords="290,1041,557,1129">
-<area shape="rect" id="node14" href="ladder1v1_rating.html" target="_top" title="ladder1v1_rating" alt="" coords="316,1147,531,1235">
-<area shape="rect" id="node15" href="ladder1v1_rating_rank_view.html" target="_top" title="ladder1v1_rating_rank_view" alt="" coords="274,1252,573,1340">
-<area shape="rect" id="node16" href="ladder_division_score.html" target="_top" title="ladder_division_score" alt="" coords="299,1357,547,1445">
-<area shape="rect" id="node17" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="307,1463,539,1551">
-<area shape="rect" id="node18" href="login_log.html" target="_top" title="login_log" alt="" coords="348,1568,499,1656">
-<area shape="rect" id="node19" href="map.html" target="_top" title="map" alt="" coords="339,1673,508,1761">
-<area shape="rect" id="node20" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="303,1779,543,1867">
-<area shape="rect" id="node21" href="mod.html" target="_top" title="mod" alt="" coords="224,1884,623,2217">
-<area shape="rect" id="node22" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="667,1684,929,1831">
-<area shape="rect" id="node23" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="717,1848,879,1965">
-<area shape="rect" id="node24" href="mod_version.html" target="_top" title="mod_version" alt="" coords="707,1983,889,2217">
-<area shape="rect" id="node25" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="1016,2144,1256,2232">
-<area shape="rect" id="node26" href="mod_version_reviews_summary.html" target="_top" title="mod_version_reviews_summary" alt="" coords="973,1985,1299,2073">
-<area shape="rect" id="node27" href="name_history.html" target="_top" title="name_history" alt="" coords="329,2271,518,2359">
-<area shape="rect" id="node28" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="299,2376,547,2464">
-<area shape="rect" id="node29" href="player_events.html" target="_top" title="player_events" alt="" coords="327,2481,519,2569">
-<area shape="rect" id="node30" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1039,367,1233,455">
-<area shape="rect" id="node31" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="297,2587,549,2675">
-<area shape="rect" id="node32" href="teamkills.html" target="_top" title="teamkills" alt="" coords="719,479,877,567">
-<area shape="rect" id="node33" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="320,2692,527,2780">
-<area shape="rect" id="node34" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="313,2797,533,2885">
-<area shape="rect" id="node35" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="292,2903,555,2991">
-<area shape="rect" id="node36" href="user_notes.html" target="_top" title="user_notes" alt="" coords="340,3008,507,3096">
-<area shape="rect" id="node37" href="vote.html" target="_top" title="vote" alt="" coords="354,3113,493,3201">
+<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="607,637,756,725">
+<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="261,1015,439,1279">
+<area shape="rect" id="node13" href="terms_of_service.html" target="_top" title="terms_of_service" alt="" coords="5,1164,217,1252">
+<area shape="rect" id="node3" href="ban.html" target="_top" title="ban" alt="" coords="1339,623,1460,711">
+<area shape="rect" id="node4" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="941,704,1172,792">
+<area shape="rect" id="node10" href="game_stats.html" target="_top" title="game_stats" alt="" coords="597,883,766,971">
+<area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="601,1148,762,1236">
+<area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="947,1161,1167,1249">
+<area shape="rect" id="node7" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="549,1253,813,1341">
+<area shape="rect" id="node8" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="575,1359,788,1447">
+<area shape="rect" id="node9" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="943,809,1170,897">
+<area shape="rect" id="node11" href="game_review.html" target="_top" title="game_review" alt="" coords="965,915,1149,1003">
+<area shape="rect" id="node12" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="565,1464,797,1552">
+<area shape="rect" id="node14" href="login_log.html" target="_top" title="login_log" alt="" coords="607,1569,756,1657">
+<area shape="rect" id="node15" href="map.html" target="_top" title="map" alt="" coords="601,2237,762,2325">
+<area shape="rect" id="node16" href="license.html" target="_top" title="license" alt="" coords="265,2421,435,2539">
+<area shape="rect" id="node17" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="561,1711,802,1799">
+<area shape="rect" id="node18" href="mod.html" target="_top" title="mod" alt="" coords="483,2343,880,2735">
+<area shape="rect" id="node19" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="924,2397,1189,2573">
+<area shape="rect" id="node20" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="976,2011,1137,2128">
+<area shape="rect" id="node21" href="mod_version.html" target="_top" title="mod_version" alt="" coords="966,2145,1147,2380">
+<area shape="rect" id="node22" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="1279,1799,1520,1887">
+<area shape="rect" id="node23" href="mod_version_reviews_summary.html" target="_top" title="mod_version_reviews_summary" alt="" coords="1233,2148,1565,2236">
+<area shape="rect" id="node24" href="name_history.html" target="_top" title="name_history" alt="" coords="587,1816,775,1904">
+<area shape="rect" id="node25" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="557,1921,805,2009">
+<area shape="rect" id="node26" href="player_events.html" target="_top" title="player_events" alt="" coords="587,2027,776,2115">
+<area shape="rect" id="node27" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1303,908,1495,996">
+<area shape="rect" id="node28" href="service_links.html" target="_top" title="service_links" alt="" coords="591,2132,771,2220">
+<area shape="rect" id="node29" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="555,5,808,93">
+<area shape="rect" id="node30" href="teamkills.html" target="_top" title="teamkills" alt="" coords="980,1020,1133,1108">
+<area shape="rect" id="node31" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="578,111,785,199">
+<area shape="rect" id="node32" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="573,216,790,304">
+<area shape="rect" id="node33" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="548,321,815,409">
+<area shape="rect" id="node34" href="user_notes.html" target="_top" title="user_notes" alt="" coords="599,427,764,515">
+<area shape="rect" id="node35" href="vote.html" target="_top" title="vote" alt="" coords="615,532,748,620">
 </map>
                                         <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/mod.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="mod.html" target="_top" title="mod" alt="" coords="227,196,624,588">
+<area shape="rect" id="node2" href="license.html" target="_top" title="license" alt="" coords="9,515,179,632">
+<area shape="rect" id="node3" href="login.html" target="_top" title="login" alt="" coords="5,233,183,497">
+<area shape="rect" id="node4" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="668,5,933,181">
+<area shape="rect" id="node5" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="720,199,881,316">
+<area shape="rect" id="node6" href="mod_version.html" target="_top" title="mod_version" alt="" coords="710,333,891,568">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/mod.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="avatars.html" target="_top" title="avatars" alt="" coords="607,971,756,1059">
+<area shape="rect" id="node2" href="login.html" target="_top" title="login" alt="" coords="261,1361,439,1625">
+<area shape="rect" id="node13" href="terms_of_service.html" target="_top" title="terms_of_service" alt="" coords="5,789,217,877">
+<area shape="rect" id="node3" href="ban.html" target="_top" title="ban" alt="" coords="1339,1053,1460,1141">
+<area shape="rect" id="node4" href="moderation_report.html" target="_top" title="moderation_report" alt="" coords="941,1135,1172,1223">
+<area shape="rect" id="node10" href="game_stats.html" target="_top" title="game_stats" alt="" coords="597,1252,766,1340">
+<area shape="rect" id="node5" href="clan.html" target="_top" title="clan" alt="" coords="601,2781,762,2869">
+<area shape="rect" id="node6" href="clan_membership.html" target="_top" title="clan_membership" alt="" coords="947,2187,1167,2275">
+<area shape="rect" id="node7" href="featured_mods_owners.html" target="_top" title="featured_mods_owners" alt="" coords="549,1517,813,1605">
+<area shape="rect" id="node8" href="friends_and_foes.html" target="_top" title="friends_and_foes" alt="" coords="575,1623,788,1711">
+<area shape="rect" id="node9" href="game_player_stats.html" target="_top" title="game_player_stats" alt="" coords="943,1240,1170,1328">
+<area shape="rect" id="node11" href="game_review.html" target="_top" title="game_review" alt="" coords="965,1345,1149,1433">
+<area shape="rect" id="node12" href="leaderboard_rating.html" target="_top" title="leaderboard_rating" alt="" coords="565,1728,797,1816">
+<area shape="rect" id="node14" href="login_log.html" target="_top" title="login_log" alt="" coords="607,1833,756,1921">
+<area shape="rect" id="node15" href="map.html" target="_top" title="map" alt="" coords="601,549,762,637">
+<area shape="rect" id="node16" href="license.html" target="_top" title="license" alt="" coords="265,476,435,593">
+<area shape="rect" id="node17" href="map_version_review.html" target="_top" title="map_version_review" alt="" coords="561,1939,802,2027">
+<area shape="rect" id="node18" href="mod.html" target="_top" title="mod" alt="" coords="483,140,880,532">
+<area shape="rect" id="node19" href="mod_reviews_summary.html" target="_top" title="mod_reviews_summary" alt="" coords="924,392,1189,568">
+<area shape="rect" id="node20" href="mod_stats.html" target="_top" title="mod_stats" alt="" coords="976,257,1137,375">
+<area shape="rect" id="node21" href="mod_version.html" target="_top" title="mod_version" alt="" coords="966,5,1147,240">
+<area shape="rect" id="node22" href="mod_version_review.html" target="_top" title="mod_version_review" alt="" coords="1279,531,1520,619">
+<area shape="rect" id="node23" href="mod_version_reviews_summary.html" target="_top" title="mod_version_reviews_summary" alt="" coords="1233,8,1565,96">
+<area shape="rect" id="node24" href="name_history.html" target="_top" title="name_history" alt="" coords="587,2044,775,2132">
+<area shape="rect" id="node25" href="player_achievements.html" target="_top" title="player_achievements" alt="" coords="557,2149,805,2237">
+<area shape="rect" id="node26" href="player_events.html" target="_top" title="player_events" alt="" coords="587,2255,776,2343">
+<area shape="rect" id="node27" href="reported_user.html" target="_top" title="reported_user" alt="" coords="1303,1339,1495,1427">
+<area shape="rect" id="node28" href="service_links.html" target="_top" title="service_links" alt="" coords="591,2360,771,2448">
+<area shape="rect" id="node29" href="table_map_comments.html" target="_top" title="table_map_comments" alt="" coords="555,2465,808,2553">
+<area shape="rect" id="node30" href="teamkills.html" target="_top" title="teamkills" alt="" coords="980,1451,1133,1539">
+<area shape="rect" id="node31" href="unique_id_users.html" target="_top" title="unique_id_users" alt="" coords="578,2571,785,2659">
+<area shape="rect" id="node32" href="uniqueid_exempt.html" target="_top" title="uniqueid_exempt" alt="" coords="573,2676,790,2764">
+<area shape="rect" id="node33" href="user_group_assignment.html" target="_top" title="user_group_assignment" alt="" coords="548,655,815,743">
+<area shape="rect" id="node34" href="user_notes.html" target="_top" title="user_notes" alt="" coords="599,760,764,848">
+<area shape="rect" id="node35" href="vote.html" target="_top" title="vote" alt="" coords="615,865,748,953">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/mod.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                 </div>
                             </div>
@@ -410,7 +523,7 @@
                         <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
                         <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
                     </div>
-                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
                 </div>
                 <!-- /.container -->
             </footer>
